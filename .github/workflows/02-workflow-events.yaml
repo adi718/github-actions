@@ -2,6 +2,9 @@ name: 02 - Workflow Events
 
 on:
     push:
+    pull_request:
+    schedule:
+        - cron: "*/5 * * * *"
     workflow_dispatch:
 
 jobs:
@@ -9,6 +12,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Show the trigger
-              run: echo "The name of Github ${{ github.event_name}} event."
+              run: echo "I have been triggered by a(n) ${{ github.event_name}} event."
 
 
