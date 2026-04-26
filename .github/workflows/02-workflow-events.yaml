@@ -7,6 +7,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Show the trigger
-              run: "The name of Github ${{ github.event_name}} event."
+              run: echo "The name of Github ${{ github.event_name}} event."
 
 
